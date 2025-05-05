@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Excuse de retard</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 50px;
+    }
+    .excuse {
+      font-size: 1.8em;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🚗 Je suis en retard… mais j'ai une excuse !</h1>
+  <div class="excuse" id="excuse"></div>
+
+  <script>
+    const excuses = [
+      "J'ai pris une mauvaise sortie… en 2019.",
+      "Un pigeon m’a regardé de travers, j’ai dû négocier.",
+      "Mon café a décidé qu’on ne bougeait pas.",
+      "Le GPS m’a envoyé chez ma belle-mère, j’ai paniqué.",
+      "J’arrive… selon une définition très souple du mot.",
+      "Les bouchons sont mon milieu naturel.",
+      "Ma voiture refuse de travailler le lundi (et le reste de la semaine)."
+    ];
+
+    const excuseElement = document.getElementById("excuse");
+    const randomExcuse = excuses[Math.floor(Math.random() * excuses.length)];
+    excuseElement.textContent = randomExcuse;
+  </script>
+</body>
+</html>
