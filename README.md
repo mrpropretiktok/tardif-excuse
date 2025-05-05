@@ -1,2 +1,54 @@
 # tardif-excuse
 Page d’excuses pour retard automobile
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Excuse de retard</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 50px;
+    }
+    .excuse {
+      font-size: 1.8em;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🚗 Je suis en retard… mais j'ai une excuse !</h1>
+  <div class="excuse" id="excuse"></div>
+
+  <script>
+    const excuses = [
+      "Frérot, c’est pas moi, c’est le tram qui voulait pas avancer.",
+  "J’ai croisé une daronne, elle m’a kidnappé pour porter les sacs.",
+  "Y avait une descente de keufs dans ma rue, obligé de faire demi-tour.",
+  "Mon scooter ? Il a décidé de vivre sa meilleure vie sans moi.",
+  "J’ai confondu l’heure de la convocation avec l’heure du goûter.",
+  "Le réveil ? J’l’avais mis, mais il avait la flemme aussi.",
+  "Le métro a décidé de jouer à cache-cache avec moi.",
+  "Waze m’a envoyé au bled, je reviens là.",
+  "J’ai dû esquiver un embouteillage ET mon ex.",
+  "La daronne a bloqué la porte, ‘fallait finir la vaisselle.",
+  "J’ai dû négocier la paix avec mon p’tit frère avant de sortir.",
+  "Mon chargeur de cerveau était débranché ce matin.",
+  "Y avait des travaux... comme d’hab’... partout.",
+  "La voiture a capté personne, j’ai dû la motiver.",
+  "J’me suis perdu entre motivation et sieste.",
+  "Mon pote m’a dit ‘2 minutes’... j’l’ai cru comme un tocard.",
+  "Ma montre est encore à l’heure d’été 2018.",
+  "J’me suis embrouillé avec mon miroir, j’étais pas prêt à sortir.",
+  "Ma trottinette a déclaré forfait à mi-chemin.",
+  "J’ai croisé la meuf du quartier... j’ai pas pu juste passer."
+];
+const excuseElement = document.getElementById("excuse");
+    const randomExcuse = excuses[Math.floor(Math.random() * excuses.length)];
+    excuseElement.textContent = randomExcuse;
+  </script>
+</body>
+</html>
